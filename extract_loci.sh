@@ -1,4 +1,6 @@
 #!/bin/bash
+#version 1.3
+
 Names=`grep "Kept" populations*/populations.log | cut -f 1 -d"/"` #Extracts the names of the assemblies
 NamesArray=(${Names})
 Loci=`grep "Kept" populations*/populations.log | cut -f 2 -d" "` #extracts the locus count for each assembly
