@@ -1,4 +1,5 @@
 #!/bin/bash
+# Version 1.3
 Names=`grep -A 12 "BEGIN snps_per_loc_prefilters" populations*/populations.log.distribs | grep -v "BEGIN" | grep -v "#" |grep -v "\-\-" | cut -f 1 -d"/"`
 NamesArray=(${Names})
 snps=`grep -A 13 "BEGIN snps_per_loc_prefilters" populations*/populations.log.distribs | grep -v "BEGIN" | grep -v "#" |grep -v "\-\-" | grep -v "n_snps"| awk -F\- '{print $NF}'`
